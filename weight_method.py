@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 import sklearn.covariance as skc
 import scipy.optimize as sco
-import cvxopt as cvx
+import cvxopt as cvx   ##you may need to install this package
 from cvxopt import matrix
 
 class PortOptimizer():
@@ -16,7 +16,7 @@ class PortOptimizer():
         self.pena=0
         self.bound=1
         self.covtype='sample' #'LedoitWolf' ‘MinDet’
-    
+    ##you need to feed all these parameters even though you may not use some of them
     def fitpena(self,pena):
         self.pena = pena
     def fitbnd(self,bnd):
